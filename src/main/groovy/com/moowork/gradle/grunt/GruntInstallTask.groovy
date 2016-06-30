@@ -12,7 +12,8 @@ class GruntInstallTask
         this.group = 'Grunt'
         this.description = "Runs 'npm install grunt-cli grunt' to install grunt-cli"
 
-        setArgs( ['install', 'grunt-cli', 'grunt'] )
+        // TODO Parameterize grunt version and pass in if needed.
+        setArgs( ['install', 'grunt-cli', 'grunt@0.4.5'] )
 
         this.project.afterEvaluate {
             setWorkingDir( this.project.node.nodeModulesDir )
